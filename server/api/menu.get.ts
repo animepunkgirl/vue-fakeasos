@@ -59,7 +59,8 @@ const formatCollection = (childrens: any[]): Collection => {
   const collection: Collection = {}
   for (const children of childrens) {
     const title = getTitle(children)
-    collection[title] = formatCategoryGroup(children.children)
+    if(!isExcludedCollection(title))
+      collection[title] = formatCategoryGroup(children.children)
   }
   return collection;
 }
@@ -119,6 +120,6 @@ const getImageUrl = (item: any) => item.content?.webLargeImageUrl
 const isExcludedCategory = (title: string) => {
   return title.toLowerCase().includes('app') || title === 'SALE'
 }
-const isEmpty = (any: string) => !Number.isInteger(any) && !Object.keys(any).length
+const isExcludedCollection = (title: string) => title === 'Marketplace'
 const findMenNav = (arr: any[]) => arr.find(item => item.content?.title === 'Men')
 const findWomenNav = (arr: any[]) => arr.find(item => item.content?.title === 'Women')
