@@ -26,7 +26,7 @@ const getContainerClassByGroup = (group_type: GroupType, items_count: number) =>
     const is2Columns = items_count >= 10
     console.log(items_count)
     return {
-      'grid': true,
+      'grid gap-x-2': true,
       'grid-cols-2': is2Columns,
     }
   }
