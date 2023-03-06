@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.4.1",
+    "@types/node": "^18.14.0",
+    "nuxt": "^3.0.0-rc.14",
+    "nuxt-viewport": "^2.0.3",
+    "typescript": "^4.9.5",
+    "vue-tsc": "^1.1.7"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.7",
+    "pinia": "^2.0.32",
+    "tailwind-scrollbar": "^2.1.0"
+  }
+}

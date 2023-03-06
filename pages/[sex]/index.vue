@@ -1,0 +1,3 @@
+<template>
+  SEX ROUTE
+</template>
